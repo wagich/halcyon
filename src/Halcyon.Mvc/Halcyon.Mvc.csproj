@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>Adds HAL support to ASP.NET Core</Description>
+		<Copyright>Copyright 2016</Copyright>
+		<VersionPrefix>2.5.1-custom</VersionPrefix>
+		<Authors>CareerHub</Authors>
+		<TargetFrameworks>net451;netstandard1.6</TargetFrameworks>
+		<AssemblyName>Halcyon.Mvc</AssemblyName>
+		<PackageId>Halcyon.Mvc</PackageId>
+		<PackageTags>Hypermedia;ASP.NET;HAL;JSON;WebApi</PackageTags>
+		<PackageProjectUrl>https://github.com/visualeyes/halcyon</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/visualeyes/halcyon</RepositoryUrl>
+		<PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.6' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+		<GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Halcyon\Halcyon.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.1.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="1.1.2" />
+	</ItemGroup>
+
+</Project>
